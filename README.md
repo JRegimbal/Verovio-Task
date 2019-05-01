@@ -61,17 +61,34 @@ Here's a hint: you'll need to use the `renderData` function of the toolkit!
 ## Part 2: An SVG is just part of the DOM!
 
 A black and white rendering is just so boring!
+We can use <span style="color:red">c</span><span style="color:orange">o</span><span style="color:yellow">l</span><span style="color:green">o</span><span style="color:blue">u</span><span style="color:purple">r</span>
+to easily point out different musical elements.
+This can be very useful in visualizing different structures in, say, an editor.
+This is also fairly easy to do since SVG is an XML-based standard. If you've
+ever set the color of text in HTML, changing the color of an SVG element will
+be familiar.
+
 This time, try and make every custos <span style="color:blue">blue</span> and
 every clef <span style="color:red">red</span>.
 
 Hint: use the browser to inspect the SVG. See if there's anything all custos and
 clefs have in common...
 
+Also, this is a custos: ![Custos](res/custos.png)
+
 ## Part 3: Getting Information
 
+In the first staff, print the pitch of every part of a neume to the command line.
 Thankfully, Verovio makes it pretty easy to get information on the loaded
 file. Unique IDs are assigned to all elements internally in Verovio.
-Conveniently these same IDs are assigned to the corresponding SVG tags.
+Conveniently these same IDs are assigned to the corresponding SVG tags as the
+attribute `xml:id`.
 
-In the first staff, print the pitch of every part of a neume to the command line.
-You don't need to do this yourself: use `vrvToolkit.getElementAttr`.
+Hint: use `vrvToolkit.getElementAttr`.
+
+## Checking your work
+
+Later on, I'll add a solution key to the repository so you can see how I completed
+each part. You can also [fork the repository](https://help.github.com/en/articles/fork-a-repo)
+and [create a pull request](https://help.github.com/en/articles/about-pull-requests)
+so I can see what you did, but that part is optional.
