@@ -82,7 +82,7 @@ In the first staff, print the pitch of every part of a neume to the command line
 Thankfully, Verovio makes it pretty easy to get information on the loaded
 file. Unique IDs are assigned to all elements internally in Verovio.
 Conveniently these same IDs are assigned to the corresponding SVG tags as the
-attribute `xml:id`.
+attribute `id`.
 
 Hint: use `vrvToolkit.getElementAttr`.
 
