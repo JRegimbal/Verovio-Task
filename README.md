@@ -18,6 +18,8 @@ This will create a copy of the repository in a directory called `Verovio-Task` i
 
 ***
 *If you're unfamiliar with Git, you may want to keep [this cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf) handy and take a look at [the guide](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) when you have a chance.*
+
+*If you're unfamiliar with JavaScript, you might find [these guides helpful](https://developer.mozilla.org/en-US/docs/Web/javascript)*.
 ***
 
 Open the file `index.html` in an editor and in your browser of choice.
@@ -27,7 +29,7 @@ task.
 ## Part 1: Using the Engraver
 
 In `index.html`, look at the stub. It should look like this:
-```
+```javascript
 var vrvToolkit = new verovio.toolkit();
 vrvToolkit.setOptions({font: 'Bravura'});
 $.get('https://ddmal.github.io/Neon2/mei/CF-018.mei', (data) => {
