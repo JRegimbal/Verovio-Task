@@ -38,6 +38,13 @@
       for (let clef of document.getElementsByClassName("clef")) {
         clef.setAttribute("fill", "#FF0000");
       }
+
+      // Part 3
+      let firstStaff = document.getElementsByClassName("staff")[0];
+      for (let component of firstStaff.getElementsByClassName("nc")) {
+        let info = vrvToolkit.getElementAttr(component.id);
+        console.log(info["pname"] + info["oct"]);
+      }
       /* END OF USER CODE */
       }, 'text');
     </script>
