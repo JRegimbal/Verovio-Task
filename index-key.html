@@ -31,6 +31,13 @@
       container.append(svg);
       document.getElementById("output").append(container);
 
+      // Part 2
+      for (let custos of document.getElementsByClassName("custos")) {
+        custos.setAttribute("fill", "#0000FF");
+      }
+      for (let clef of document.getElementsByClassName("clef")) {
+        clef.setAttribute("fill", "#FF0000");
+      }
       /* END OF USER CODE */
       }, 'text');
     </script>
