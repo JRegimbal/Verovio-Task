@@ -1,0 +1,38 @@
+<DOCTYPE <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Verovio Tutorial</title>
+    <!-- Load our version of Verovio and JQuery -->
+    <script src="./verovio-dev/index.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.0.min.js"
+			  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+			  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Welcome to the Tutorial!</h1>
+    <div id="output">
+    </div>
+    <script type="text/javascript">
+      var vrvToolkit = new verovio.toolkit();
+      vrvToolkit.setOptions({font: 'Bravura'});
+      $.get('https://ddmal.github.io/Neon2/mei/CF-018.mei', (data) => {
+      /* ENTER USER CODE HERE */
+      // Part 1
+      let svg = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      $(svg).html(vrvToolkit.renderData(data, {}));
+      let width = parseInt($(svg.children[0]).attr("width"))
+      let height = parseInt($(svg.children[0]).attr("height"))
+      let container = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      $(container).attr("width", "100%")
+        .attr("height", window.innerHeight)
+        .attr("viewBox", "0 0 " + width + " " + height)
+      container.append(svg);
+      document.getElementById("output").append(container);
+
+      /* END OF USER CODE */
+      }, 'text');
+    </script>
+  </body>
+</html>
